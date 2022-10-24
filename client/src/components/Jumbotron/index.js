@@ -11,4 +11,3 @@ function Jumbotron({ children }) {
 }
 
 export default Jumbotron;
-

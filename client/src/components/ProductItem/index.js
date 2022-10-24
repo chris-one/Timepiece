@@ -58,4 +58,3 @@ function ProductItem(item) {
 }
 
 export default ProductItem;
-
