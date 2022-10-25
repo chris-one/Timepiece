@@ -14,7 +14,7 @@
   
 ## Description:
 
-In creating our first collaborative MERN-stack single-page application, we will combine a scalable MongoDB back end, a GraphQL API, and an Express.js and Node.js server with a React front end, implementing user authentication with JWT to build a user-focused platform. Luxurious Watches is an ecommerce site where you can look through and find admirable watches from our entire collection that we have provided. With that you can then add a watch to your cart and purchase using our 3 step checkout method where it will ask you for your shipping address, payment details, and review your order. Once that is all done it will then give you a message with a confirmation of your order. 
+In creating our first collaborative MERN-stack single-page application, we will combine a scalable MongoDB back end, a GraphQL API, and an Express.js and Node.js server with a React front end, implementing user authentication with JWT to build a user-focused platform. Luxurious Watches is an ecommerce site where you can look through and find admirable watches from our entire collection that we have provided. With that you can then add a watch to your cart and create a purchase.
 
 ## Preview:
 
