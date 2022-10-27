@@ -8,6 +8,15 @@ const itemSchema = new Schema({
     required: true,
     trim: true
   },
+    brand: {
+      type: String,
+  },
+   functionality: {
+      type: String  
+  },
+    movement: {
+    type: String
+  },
   description: {
     type: String
   },

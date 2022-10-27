@@ -9,7 +9,6 @@ db.once('open', async () => {
     { name: 'Military' },
     { name: 'Racing' },
     { name: 'Driver' },
-    { name: 'Dress' },
     { name: 'Luxury' },
     { name: 'Dress' },
     { name: 'Sport' } 
@@ -21,40 +20,52 @@ db.once('open', async () => {
 
   const items = await Item.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'Breitling Navitimer',
+      brand: 'Aviator',
+      functionality: 'Chronograph',
+      movement: 'self-winding mechanical',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+        "The famous pilot's watch is distinguished by an innovative Slide Rule bezel that acts as a calculator to record stats while flying. Those might include fuel consumption or distance traveled. However, most Navitimer owners aren't pilots, but the Slide Rule bezel has countless everyday applications. Not to mention, the clever bezel also gives the Navitimer is unique and unmistakable aesthetic.",
+      image: 'breitling-Navitimer.jpg',
       category: categories[0]._id,
-      price: 2.99,
-      quantity: 500
+      price: 6995.95,
+      quantity: 5
     },
     {
-      name: 'Canned Coffee',
+      name: 'Maverick',
+      brand: 'Victorinox',
+      functionality: 'Chronograpgh',
+      movement: 'self-winding mechanical',
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
+        "You know your own mind, and you make your own way. Team up with our Maverick watch for a sporty, modern timepiece that embodies freedom of spirit and limitless possibilities. For the risk-taker, the rule-breaker, the rebellious-hearted, this diving watch boasts water resistance to 100m and a unidirectional rotating bezel to keep track of essential timings. With its decisive design and sleek stainless steel case, this watch makes waves above the surface, too.",
+      image: 'victorinox.jpg',
       category: categories[0]._id,
-      price: 1.99,
-      quantity: 500
+      price: 900.99,
+      quantity: 40
     },
     {
-      name: 'Toilet Paper',
-      category: categories[1]._id,
+      name: 'Alliance',
+      brand: 'Victorinnox',
+      functionality:'Chronograph',
+      movement: 'automatic',
+      category: categories[0]._id,
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
+        "A very cool polished gunmetal black case, which evokes the “ice black” finish that once drew me to the older Divemaster. Even typography nerds shouldn’t find too much to cry about here, with excellent consistency and legibility exhibited between the dial and the laser-engraved aluminum tachymeter bezel insert. It’s not just the sheer level of detail, but the quality as well – all amounting to a package that you’d be hard-pressed to find on even an automatic watch costing several times as much.",
+      image: 'alliance.jpg',
+      price: 800.00,
       quantity: 20
     },
     {
-      name: 'Handmade Soap',
-      category: categories[1]._id,
+      name: 'Cosmogragh Daytona',
+      brand: 'Rolex',
+      functionality: 'Chronograph',
+      movement: 'self-winding mechanical',
+      category: categories[2]._id,
       description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
-      quantity: 50
+        "Introduced in 1963, the Cosmograph Daytona was designed to meet the demands of professional racing drivers. It is an icon forever joined in name and function to the high-performance world of motor sport. More than 50 years after its creation, the Cosmograph Daytona remains in a class of its own among sport chronographs and continues to transcend time.",
+      image: 'cosmograph.jpeg',
+      price: 2500.00,
+      quantity: 6
     },
     {
       name: 'Set of Wooden Spoons',
