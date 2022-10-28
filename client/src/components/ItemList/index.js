@@ -52,7 +52,7 @@ function ItemList() {
             <Item
               key={item._id}
               _id={item._id}
-              image={item.image}
+              images={item.images}
               name={item.name}
               price={item.price}
               quantity={item.quantity}

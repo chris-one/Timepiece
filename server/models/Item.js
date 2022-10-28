@@ -20,7 +20,7 @@ const itemSchema = new Schema({
   description: {
     type: String
   },
-  image: {
+  images: {
     type: String
   },
   price: {

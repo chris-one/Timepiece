@@ -103,7 +103,7 @@ function Detail() {
           </p>
 
           <img
-            src={`/images/${currentItem.image}`}
+            src={`/images/${currentItem.images}`}
             alt={currentItem.name}
           />
         </div>

@@ -9,7 +9,7 @@ function Item(item) {
   const [state, dispatch] = useStoreContext();
 
   const {
-    image,
+    images,
     name,
     _id,
     price,
@@ -44,7 +44,7 @@ function Item(item) {
       <Link to={`/items/${_id}`}>
         <img
           alt={name}
-          src={`/images/${image}`}
+          src={`/images/${images}`}
         />
         <p>{name}</p>
       </Link>

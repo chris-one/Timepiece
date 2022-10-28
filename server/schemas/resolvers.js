@@ -66,7 +66,7 @@ const resolvers = {
         const item = await stripe.items.create({
           name: items[i].name,
           description: items[i].description,
-          images: [`${url}/images/${items[i].image}`]
+          images: [`${url}/images/${items[i].images}`]
         });
 
         const price = await stripe.prices.create({
