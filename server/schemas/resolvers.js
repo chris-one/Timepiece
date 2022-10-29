@@ -32,7 +32,7 @@ const resolvers = {
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.products',
+          path: 'orders.items',
           populate: 'category'
         });
 
@@ -46,7 +46,7 @@ const resolvers = {
     order: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.products',
+          path: 'orders.items',
           populate: 'category'
         });
 
@@ -57,13 +57,13 @@ const resolvers = {
     },
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
-      const order = new Order({ products: args.products });
+      const order = new Order({ items: args.items });
       const line_items = [];
 
-      const { products } = await order.populate('products');
+      const { items } = await order.populate('items');
 
-      for (let i = 0; i < products.length; i++) {
-        const product = await stripe.products.create({
+      for (let i = 0; i < items.length; i++) {
+        const item = await stripe.items.create({
           name: products[i].name,
           description: products[i].description,
           images: [`${url}/images/${products[i].image}`]

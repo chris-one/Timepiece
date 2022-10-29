@@ -60,7 +60,7 @@ function ProductList() {
           ))}
         </div>
       ) : (
-        <h3>You haven't added any products yet!</h3>
+        <h3>There is nothing in your cart.</h3>
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
     </div>
