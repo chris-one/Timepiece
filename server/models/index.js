@@ -10,6 +10,8 @@ const app = express()
 const cors = require('cors')
 const mongoose = require('mongoose')
 const users =require('./models./user.model')
+const jwt =require('jsonwebtoke')
+
 
 app.use(cors())
 app.use(express.json())
