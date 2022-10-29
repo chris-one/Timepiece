@@ -38,7 +38,23 @@ app.post('/api/login', async (req, res) => {
             email: req.body.email,
             password: req.body.password,
         })
-    }catch (err) {
+
+        if (user) {
+            const token = jwt.sign(
+                {
+                    name: user.name,
+                    email: user.email,
+                },
+                'admin123'
+            )
+
+            return res.json ({ status: 'ok', user: token })
+        } else {
+            return res.json ({ status: 'error', user: false })
+        }
+        }
+
+    catch (err) {
         res.json({ status: 'ok' })
     }
     res.json({status: 'error', error: 'Duplicate email'})
